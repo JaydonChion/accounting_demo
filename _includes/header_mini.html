@@ -1,0 +1,65 @@
+<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #f7f7f7;">
+        <div class="container-fluid navbar-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button id="check" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-mini-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand page-scroll" href="#page-top">{{site.title}}</a> -->
+                <a class="navbar-brand page-scroll" href="{{ site.baseurl | prepend: site.url }}"><img class="header-logo" src="../../img/tiger-logo.png" alt=""><span class="company-name"></span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="header-mini-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a style="color: #{{ site.data.template.color.primary }};" href="{{ site.baseurl | prepend: site.url }}#services">Services</a>
+                    </li>
+                    <li>
+                        <a style="color: #{{ site.data.template.color.primary }};" href="{{ site.baseurl | prepend: site.url }}#about">About</a>
+                    </li>
+                    <li>
+                        <a style="color: #{{ site.data.template.color.primary }};" href="{{ site.baseurl | prepend: site.url }}#whychooseus">Why Choose Us</a>
+                    </li>
+                    <li>
+                        <a style="color: #{{ site.data.template.color.primary }};" href="{{ site.baseurl | prepend: site.url }}#testimonials">Testimonials</a>
+                    </li>
+                    <li>
+                        <a style="color: #{{ site.data.template.color.primary }};" href="{{ site.baseurl | prepend: site.url }}#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <div>
+        <header style="height: 35rem; object-fit: cover; background-position: top;">
+            <div class="container">
+                <div class="intro-text" style="padding-top: 16rem;">
+                    <div class="intro-heading" style="margin-bottom: 0; font-size: 3rem;">{{page.headerTitle}}</div>
+                </div>
+            </div>
+        </header>
+    </div>
+<!--
+        {% for page in site.pages %}
+          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
+        {% endfor %}
+ -->
+<script>
+    document.getElementById("check").onclick = function(){
+        document.getElementById("header-mini-navbar").classList.toggle("collapse");
+    }
+</script>

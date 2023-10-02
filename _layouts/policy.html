@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+
+  <body id="page-top" class="index">
+    {% include header_mini.html %}
+    {% if page.contentPage == "promotion.html" %}
+      {% include promotion.html%}
+    {% elsif page.contentPage == "pdpa.html" %}
+      {% include pdpa.html %}
+    {% endif %}
+    {% include footer.html %}
+  </body>
+</html>

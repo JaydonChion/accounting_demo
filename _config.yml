@@ -1,0 +1,43 @@
+#url: http://127.0.0.1:4000
+#baseurl: ""
+url: http://127.0.0.1:4000
+baseurl: ""
+
+
+plugins:
+  - jekyll-sitemap
+#  - jekyll-redirect-from
+
+# Site settings
+title: MyAccountant - Best Accounting Firm for companies in Singapore
+email: consultant@myaccountant.sg
+description: "We specialised in SME accounting. Reach out to us to find out more!"
+
+subtitle: We free you from troubles
+tagline: The most reliable accounting firm in Singapore
+
+policy: https://ajar-cloudberry-4a0.notion.site/myaccountant-PTE-LTD-df01e886e2334270841a1c3473bd1c34
+
+promotandc: https://myaccountant.sg/promotion/tnc
+
+myaccountantapp: https://script.google.com/macros/s/AKfycbzIGyL8CpKz1b7bEPrJdAbt3v56v6V-oSZsdfdsfezftigGnZwNQiqZ49WiVdy__mDDfJf77i/exec
+
+
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: facebook
+    url: 
+  - title: whatsapp
+    url: 
+  - title: linkedin
+    url: 
+
+# Postal address (add as many lines as necessary)
+# address:
+#   - line: 3481 Melrose Place
+#   - line: Beverly Hills, CA 90210
+
+# Build settings
+markdown: kramdown
+permalink: pretty

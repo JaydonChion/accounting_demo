@@ -1,0 +1,57 @@
+<section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Us</h2>
+                    <h3 id="formSub" class="section-subheading text-muted" style="color: #ffffff">Reach out to us to find out more<br>Fill in the following form, our service consultants will respond to you at the earliest</h3>
+                    <h3 class="section-subheading text-muted" style="color: #ffffff">Whatsapp: (+65)1234 5678 | Email: consultant@myaccountant.sg</h3>
+                    <h3 id="promoApplied" class="section-subheading" style="color: #05fc3b; display:none; margin-bottom: 0.5rem; padding-bottom: 0; font-size: 1.5rem;">Promo code applied successfully</h3>
+                    <h3 id="promoInstruction" class="section-subheading" style="color: #05fc3b; display:none; margin-bottom: 0.5rem; padding-bottom: 0; font-size: 1.5rem;">Kindly fill up the form for the promotion, our team will reach out to you shortly</h3>
+                    <p id="promotandc" style="color: #d1d1d1; display: none; margin-top: 0; margin-bottom: 1rem; padding-top: 0;"><a style="color: #d1d1d1;" href="{{ site.promotandc }}">Promotion T&C</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="control-group form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group form-group">
+                                    <input type="text" class="form-control" placeholder="Your Company Name (Optional)" id="companyName">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group form-group">
+                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div id="promocodeDiv" class="control-group form-group" style="display:none">
+                                    <input type="text" class="form-control" placeholder="Promo Code *" id="promocode">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="control-group form-group">
+                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <p style="color: #d1d1d1"><a href="https://myaccountant.sg/policy/pdpa.html">View Data Protection Policy</a></p>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" id="contactButton" class="btn btn-xl">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

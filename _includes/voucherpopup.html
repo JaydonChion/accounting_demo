@@ -1,0 +1,198 @@
+<div id="voucherPopup" class="voucherContainer">
+    <div class="voucherModal">
+        <div class="voucherContent">
+            <h3>Voucher just for you!</h3>
+            <img src="{{ site.baseurl }}/img/promotion/30percentoff.png" alt="30 percent off voucher">
+            <p class="hiddenClause">This voucher is exclusively for businesses that are three years old or younger</p>
+            <center>
+                <button id="useBtn">Use Now</button>
+            </center>
+        </div>
+        <div class="buttonDiv">
+            <button class="close-button">&times;</button>
+        </div>
+
+    </div>
+</div>
+
+<style>
+
+.voucherContainer{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: None;
+    background-color: #5e5e5e;
+    z-index: 1000;
+}
+
+.voucherModal {
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.voucherContent {
+  background-color:#fff;
+  border-bottom-left-radius: 50% 20px;
+  border-bottom-right-radius: 50% 20px;
+  border-top-left-radius: 50% 20px;
+  border-top-right-radius: 50% 20px;
+  color: #{{ site.data.template.color.primary }};
+  position: relative;
+  max-height: 80vh;
+  max-width: 40vw;
+  top: 15%;
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+.voucherContent img{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.voucherContent button{
+    font-size: 2rem;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    border-radius: 0.5rem;
+    border: 0px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.voucherContent button:hover{
+    font-size: 2rem;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    border-radius: 0.5rem;
+    border: 0px;
+    font-weight: 600;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.close-button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: transparent;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  display: block;
+
+}
+
+.close-button:hover {
+  background-color: grey;
+}
+
+.buttonDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top:20vh;
+}
+
+
+@media only screen and (max-width: 720px) {
+
+    .buttonDiv{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top:25vh;
+    }
+
+
+    .close-button {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        border: 3px solid white;
+        background-color: transparent;
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        display: block;
+    }
+
+    .voucherContent {
+        background-color:#fff;
+        border-bottom-left-radius: 50% 20px;
+        border-bottom-right-radius: 50% 20px;
+        border-top-left-radius: 50% 20px;
+        border-top-right-radius: 50% 20px;
+        color: #{{ site.data.template.color.primary }};
+        position: relative;
+        max-height: 80vh;
+        max-width: 80vw;
+        top: 20%;
+        padding: 1rem;
+    }
+}
+
+.hiddenClause {
+    font-size: 1rem;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.voucherContent h3{
+  font-size: 2.5rem;
+  background: -webkit-linear-gradient(#{{ site.data.template.color.primary }}, #f502dd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align:center;
+}
+
+</style>
+
+<script>
+    $(document).ready(function() {
+        $(".close-button").click(function() {
+            $(".voucherContainer").fadeOut();
+            window.gtag('event', 'close_30off_voucher');
+        });
+
+        $("#useBtn").click(function() {
+            $(".voucherContainer").fadeOut();
+
+            $("#contact #promoApplied").text("30% off promotion is applied successfully")
+            $("#contact #formSub").hide();
+            $("#contact #promoApplied").show();
+            $("#contact #promotandc").show();
+            $("#promoInstruction").show();
+            $("#contact input#promocode").val("30PercentOff");
+            $("#contact input#promocode").attr('readonly', true);
+            $('html, body').animate({
+                scrollTop: $("#contact").offset().top
+            },1000);
+
+            $('html, body').animate({
+                scrollTop: $("#contact").offset().top
+            },1000);
+            window.gtag('event', 'use_30off_voucher');
+
+        });
+
+    });
+</script>
